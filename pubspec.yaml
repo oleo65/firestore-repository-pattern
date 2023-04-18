@@ -1,0 +1,30 @@
+name: firestore_repository_pattern
+description: A new Flutter package project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  cloud_firestore: ^4.4.2
+  flutter_hooks: ^0.18.6
+  freezed_annotation: ^2.0.0
+  riverpod_annotation: ^2.1.0
+  hooks_riverpod: ^2.3.0
+
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  freezed: ^2.0.0
+  build_runner: ^2.0.6
+  riverpod_generator: ^2.2.0
+
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# The following section is specific to Flutter packages.
+flutter:
