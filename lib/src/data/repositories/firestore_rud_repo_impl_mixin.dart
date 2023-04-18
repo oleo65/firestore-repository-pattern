@@ -2,11 +2,11 @@ import '../../domain/entities/entity_convert_mixin.dart';
 import '../../domain/entities/map_convert_mixin.dart';
 import '../../domain/entities/update_container.dart';
 import '../models/change_set.dart';
-import '../sources/base_crud_data_source.dart';
+import '../sources/interface/base_crud_data_source_interface.dart';
 
-mixin FirestoreRdRepositoryImplMixin<TEntity extends MapConvertMixin,
+mixin FirestoreRudRepositoryImplMixin<TEntity extends MapConvertMixin,
     TModel extends EntityConvertMixin<TEntity>> {
-  BaseCrudDataSource<TModel> get crudSource;
+  BaseCrudDataSourceInterface<TModel> get crudSource;
 
   Future<void> delete(String id) {
     return crudSource.delete(id);

@@ -1,6 +1,6 @@
-import '../models/change_set.dart';
+import '../../models/change_set.dart';
 
-abstract class BaseCrudDataSource<TModel> {
+abstract class BaseCrudDataSourceInterface<TModel> {
   Stream<TModel> read(String id);
   Future<String> create(TModel created);
   Future<void> update(ChangeSet updated);
