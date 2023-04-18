@@ -1,6 +1,7 @@
 library firestore_repository_pattern;
 
 export 'src/data/models/change_set.dart' show ChangeSet;
+export 'src/data/sources/exceptions.dart' show ElementNotFoundException;
 export 'src/data/repositories/firestore_rud_repo_impl_mixin.dart'
     show FirestoreRudRepositoryImplMixin;
 export 'src/data/sources/interface/base_crud_data_source_interface.dart'

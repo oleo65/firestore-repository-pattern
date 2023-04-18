@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/change_set.dart';
+import 'exceptions.dart';
 
 mixin FirestoreCrudDataSourceMixin<T> {
   late final FirebaseFirestore firestore;
@@ -34,13 +35,4 @@ mixin FirestoreCrudDataSourceMixin<T> {
   Map<String, dynamic> toCreatePayload(T created);
 
   CollectionReference<Map<String, dynamic>> get itemCollection;
-}
-
-class ElementNotFoundException implements Exception {
-  final String id;
-
-  ElementNotFoundException(this.id);
-
-  @override
-  String toString() => "Element with id $id does not exist in collection";
 }
