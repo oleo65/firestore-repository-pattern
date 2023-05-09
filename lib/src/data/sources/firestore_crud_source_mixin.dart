@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/change_set.dart';
+import '../../domain/entities/map_convert_mixin.dart';
 import 'exceptions.dart';
 
-mixin FirestoreCrudDataSourceMixin<T> {
+mixin FirestoreCrudDataSourceMixin<T extends MapConvertMixin> {
   late final FirebaseFirestore firestore;
 
   Future<String> create(T created) async {
@@ -30,9 +31,13 @@ mixin FirestoreCrudDataSourceMixin<T> {
     return itemCollection.doc(id).delete();
   }
 
-  T fromDocumentSnapshot(DocumentSnapshot<Map<String, dynamic>> snapshot);
+  Map<String, dynamic> toCreatePayload(T created) {
+    final mappedData = created.toMap();
+    mappedData.remove('id');
+    return mappedData;
+  }
 
-  Map<String, dynamic> toCreatePayload(T created);
+  T fromDocumentSnapshot(DocumentSnapshot<Map<String, dynamic>> snapshot);
 
   CollectionReference<Map<String, dynamic>> get itemCollection;
 }
