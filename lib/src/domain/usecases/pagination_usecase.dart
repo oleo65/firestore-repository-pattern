@@ -7,7 +7,7 @@ abstract class PaginationUseCase<T> {
   Future<void> refresh(int pageIndex);
 }
 
-abstract class PaginationUseCaseParametrized<T, TParam extends String> {
+abstract class PaginationUseCaseParametrized<T, TParam extends String?> {
   FirestorePaginationRepositoryMixin<T> get paginationRepository;
   Stream<ResultListPage<T>> call(TParam para);
   Future<void> nextPage(int pageIndex, TParam para) =>

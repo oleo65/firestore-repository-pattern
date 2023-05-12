@@ -17,10 +17,10 @@ mixin PaginationProviderMixin<T, TResult extends ResultListPage<T>>
   Future<void> refresh() => paginatedUseCase.refresh(_fetchedPages);
 }
 
-mixin PaginationProviderParametrizedMixin<T,
-    TResult extends ResultListPage<T>> {
+mixin PaginationProviderParametrizedMixin<T, TResult extends ResultListPage<T>,
+    TParam extends String?> {
   int fetchedPages = 0;
-  PaginationUseCaseParametrized<T, String> get paginatedUseCase;
+  PaginationUseCaseParametrized<T, TParam> get paginatedUseCase;
   AsyncValue<TResult> get state;
   Future<void> Function() get fetchNextPage;
   Future<void> Function() get refreshAll;
