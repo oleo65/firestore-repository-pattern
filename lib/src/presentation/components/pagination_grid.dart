@@ -12,6 +12,7 @@ class PaginationGrid<
   final String? collectionId;
   final double scrollThreshold;
   final SliverGridDelegate gridDelegate;
+  final Axis scrollDirection;
   final Widget? Function(
     BuildContext context,
     int index,
@@ -26,6 +27,7 @@ class PaginationGrid<
       required this.itemBuilder,
       this.collectionId,
       this.scrollThreshold = 0.95,
+      this.scrollDirection = Axis.vertical,
       this.itemsTransform,
       super.key});
 
@@ -72,6 +74,7 @@ class PaginationGrid<
           child: GridView.builder(
             controller: scrollController,
             gridDelegate: gridDelegate,
+            scrollDirection: scrollDirection,
             itemCount: items.length,
             itemBuilder: (context, index) {
               return itemBuilder(context, index, items);

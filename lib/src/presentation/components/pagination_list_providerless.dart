@@ -8,6 +8,7 @@ class PaginationListProviderless<TResult extends ResultListPage<TEntity>,
     TEntity> extends HookConsumerWidget {
   final String? collectionId;
   final double scrollThreshold;
+  final Axis scrollDirection;
   final Widget? Function(
     BuildContext context,
     int index,
@@ -27,6 +28,7 @@ class PaginationListProviderless<TResult extends ResultListPage<TEntity>,
       this.onRefresh,
       this.collectionId,
       this.scrollThreshold = 0.95,
+      this.scrollDirection = Axis.vertical,
       this.itemsTransform,
       super.key});
 
@@ -71,6 +73,7 @@ class PaginationListProviderless<TResult extends ResultListPage<TEntity>,
           onRefresh: onRefresh ?? () async {},
           child: ListView.builder(
             controller: scrollController,
+            scrollDirection: scrollDirection,
             itemCount: items.length,
             itemBuilder: (context, index) {
               return itemBuilder(context, index, items);

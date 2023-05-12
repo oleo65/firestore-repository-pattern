@@ -8,6 +8,7 @@ class PaginationGridProviderless<TResult extends ResultListPage<TEntity>,
   final String? collectionId;
   final double scrollThreshold;
   final SliverGridDelegate gridDelegate;
+  final Axis scrollDirection;
   final Widget? Function(
     BuildContext context,
     int index,
@@ -30,6 +31,7 @@ class PaginationGridProviderless<TResult extends ResultListPage<TEntity>,
       this.onRefresh,
       this.collectionId,
       this.scrollThreshold = 0.95,
+      this.scrollDirection = Axis.vertical,
       this.itemsTransform,
       this.error,
       this.loading,
@@ -77,6 +79,7 @@ class PaginationGridProviderless<TResult extends ResultListPage<TEntity>,
           child: GridView.builder(
             controller: scrollController,
             gridDelegate: gridDelegate,
+            scrollDirection: scrollDirection,
             itemCount: items.length,
             itemBuilder: (context, index) {
               return itemBuilder(context, index, items);
