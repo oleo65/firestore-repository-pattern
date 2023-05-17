@@ -2,9 +2,12 @@ import '../entities/result_list_page.dart';
 import '../repositories/firestore_pagination_repository_mixin.dart';
 
 abstract class PaginationUseCase<T> {
-  Stream<ResultListPage<T>> call();
-  Future<void> nextPage(int pageIndex);
-  Future<void> refresh(int pageIndex);
+  FirestorePaginationRepositoryMixin<T> get paginationRepository;
+  Stream<ResultListPage<T>> call() => paginationRepository.watchReadAll(null);
+  Future<void> nextPage(int pageIndex) =>
+      paginationRepository.more(pageIndex, null);
+  Future<void> refresh(int pageIndex) =>
+      paginationRepository.refresh(pageIndex, null);
 }
 
 abstract class PaginationUseCaseParametrized<T, TParam extends String?> {
