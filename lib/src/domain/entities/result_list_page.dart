@@ -11,4 +11,10 @@ class ResultListPage<T> with _$ResultListPage<T> {
     PageInfo pageInfo,
     PageFetchState pageFetchState,
   ) = _ResultListPage;
+
+  factory ResultListPage.empty() => _ResultListPage(
+        List<T>.empty(),
+        PageInfo(false),
+        PageFetchState(),
+      );
 }
