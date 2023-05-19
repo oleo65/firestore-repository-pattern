@@ -1,10 +1,10 @@
 name: firestore_repository_pattern
-description: A new Flutter package project.
-version: 0.2.3
+description: Application scaffold for efficient firestore usage including pagination.
+version: 0.3.0
 homepage:
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: '>=3.0.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
