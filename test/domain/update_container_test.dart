@@ -25,11 +25,11 @@ void main() {
       expect(result["number"], equals(2.5));
     });
 
-    test("Nested toMap", () {
+    test("Nested toMap with flatting", () {
       var updateContainer = UpdateContainer(
           topLevel, ["id", "nestedEntity.id", "nestedEntity.number"]);
 
-      final result = updateContainer.toUpdateMap();
+      final result = updateContainer.toUpdateMap(flattenMap: true);
 
       expect(result.keys.length, equals(3));
       expect(result["id"], equals("id1"));
@@ -37,7 +37,25 @@ void main() {
       expect(result["nestedEntity.number"], equals(2.5));
     });
 
-    test("Multi level nested toMap", () {
+    test("Multi level nested toMap with flatting", () {
+      var entity = TopLevelEntity("idTop", topLevel);
+      var updateContainer = UpdateContainer(entity, [
+        "id",
+        "nestedEntity.id",
+        "nestedEntity.nestedEntity.id",
+        "nestedEntity.nestedEntity.number",
+      ]);
+
+      final result = updateContainer.toUpdateMap(flattenMap: true);
+
+      expect(result.keys.length, equals(4));
+      expect(result["id"], equals("idTop"));
+      expect(result["nestedEntity.id"], equals("id1"));
+      expect(result["nestedEntity.nestedEntity.id"], equals("id2"));
+      expect(result["nestedEntity.nestedEntity.number"], equals(2.5));
+    });
+
+    test("Multi level nested toMap without flatting", () {
       var entity = TopLevelEntity("idTop", topLevel);
       var updateContainer = UpdateContainer(entity, [
         "id",
@@ -48,11 +66,11 @@ void main() {
 
       final result = updateContainer.toUpdateMap();
 
-      expect(result.keys.length, equals(4));
+      expect(result.keys.length, equals(2));
       expect(result["id"], equals("idTop"));
-      expect(result["nestedEntity.id"], equals("id1"));
-      expect(result["nestedEntity.nestedEntity.id"], equals("id2"));
-      expect(result["nestedEntity.nestedEntity.number"], equals(2.5));
+      expect(result["nestedEntity"]["id"], equals("id1"));
+      expect(result["nestedEntity"]["nestedEntity"]["id"], equals("id2"));
+      expect(result["nestedEntity"]["nestedEntity"]["number"], equals(2.5));
     });
   });
 }
