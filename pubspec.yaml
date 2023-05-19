@@ -1,6 +1,6 @@
 name: firestore_repository_pattern
 description: Application scaffold for efficient firestore usage including pagination.
-version: 0.3.0
+version: 0.3.1
 homepage:
 
 environment:
