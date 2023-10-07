@@ -62,21 +62,22 @@ class _$ChangeSetCopyWithImpl<$Res, $Val extends ChangeSet>
 }
 
 /// @nodoc
-abstract class _$$_ChangeSetCopyWith<$Res> implements $ChangeSetCopyWith<$Res> {
-  factory _$$_ChangeSetCopyWith(
-          _$_ChangeSet value, $Res Function(_$_ChangeSet) then) =
-      __$$_ChangeSetCopyWithImpl<$Res>;
+abstract class _$$ChangeSetImplCopyWith<$Res>
+    implements $ChangeSetCopyWith<$Res> {
+  factory _$$ChangeSetImplCopyWith(
+          _$ChangeSetImpl value, $Res Function(_$ChangeSetImpl) then) =
+      __$$ChangeSetImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Map<String, dynamic> changedFields});
 }
 
 /// @nodoc
-class __$$_ChangeSetCopyWithImpl<$Res>
-    extends _$ChangeSetCopyWithImpl<$Res, _$_ChangeSet>
-    implements _$$_ChangeSetCopyWith<$Res> {
-  __$$_ChangeSetCopyWithImpl(
-      _$_ChangeSet _value, $Res Function(_$_ChangeSet) _then)
+class __$$ChangeSetImplCopyWithImpl<$Res>
+    extends _$ChangeSetCopyWithImpl<$Res, _$ChangeSetImpl>
+    implements _$$ChangeSetImplCopyWith<$Res> {
+  __$$ChangeSetImplCopyWithImpl(
+      _$ChangeSetImpl _value, $Res Function(_$ChangeSetImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +86,7 @@ class __$$_ChangeSetCopyWithImpl<$Res>
     Object? id = null,
     Object? changedFields = null,
   }) {
-    return _then(_$_ChangeSet(
+    return _then(_$ChangeSetImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -100,8 +101,8 @@ class __$$_ChangeSetCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ChangeSet implements _ChangeSet {
-  _$_ChangeSet(this.id, final Map<String, dynamic> changedFields)
+class _$ChangeSetImpl implements _ChangeSet {
+  _$ChangeSetImpl(this.id, final Map<String, dynamic> changedFields)
       : _changedFields = changedFields;
 
   @override
@@ -123,7 +124,7 @@ class _$_ChangeSet implements _ChangeSet {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ChangeSet &&
+            other is _$ChangeSetImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._changedFields, _changedFields));
@@ -136,13 +137,14 @@ class _$_ChangeSet implements _ChangeSet {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ChangeSetCopyWith<_$_ChangeSet> get copyWith =>
-      __$$_ChangeSetCopyWithImpl<_$_ChangeSet>(this, _$identity);
+  _$$ChangeSetImplCopyWith<_$ChangeSetImpl> get copyWith =>
+      __$$ChangeSetImplCopyWithImpl<_$ChangeSetImpl>(this, _$identity);
 }
 
 abstract class _ChangeSet implements ChangeSet {
   factory _ChangeSet(
-      final String id, final Map<String, dynamic> changedFields) = _$_ChangeSet;
+          final String id, final Map<String, dynamic> changedFields) =
+      _$ChangeSetImpl;
 
   @override
   String get id;
@@ -150,6 +152,6 @@ abstract class _ChangeSet implements ChangeSet {
   Map<String, dynamic> get changedFields;
   @override
   @JsonKey(ignore: true)
-  _$$_ChangeSetCopyWith<_$_ChangeSet> get copyWith =>
+  _$$ChangeSetImplCopyWith<_$ChangeSetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

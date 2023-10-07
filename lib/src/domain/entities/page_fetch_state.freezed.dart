@@ -76,11 +76,11 @@ class _$PageFetchStateCopyWithImpl<$Res, $Val extends PageFetchState>
 }
 
 /// @nodoc
-abstract class _$$_PageFetchStateCopyWith<$Res>
+abstract class _$$PageFetchStateImplCopyWith<$Res>
     implements $PageFetchStateCopyWith<$Res> {
-  factory _$$_PageFetchStateCopyWith(
-          _$_PageFetchState value, $Res Function(_$_PageFetchState) then) =
-      __$$_PageFetchStateCopyWithImpl<$Res>;
+  factory _$$PageFetchStateImplCopyWith(_$PageFetchStateImpl value,
+          $Res Function(_$PageFetchStateImpl) then) =
+      __$$PageFetchStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -88,11 +88,11 @@ abstract class _$$_PageFetchStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PageFetchStateCopyWithImpl<$Res>
-    extends _$PageFetchStateCopyWithImpl<$Res, _$_PageFetchState>
-    implements _$$_PageFetchStateCopyWith<$Res> {
-  __$$_PageFetchStateCopyWithImpl(
-      _$_PageFetchState _value, $Res Function(_$_PageFetchState) _then)
+class __$$PageFetchStateImplCopyWithImpl<$Res>
+    extends _$PageFetchStateCopyWithImpl<$Res, _$PageFetchStateImpl>
+    implements _$$PageFetchStateImplCopyWith<$Res> {
+  __$$PageFetchStateImplCopyWithImpl(
+      _$PageFetchStateImpl _value, $Res Function(_$PageFetchStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -103,7 +103,7 @@ class __$$_PageFetchStateCopyWithImpl<$Res>
     Object? hasData = null,
     Object? hasError = null,
   }) {
-    return _then(_$_PageFetchState(
+    return _then(_$PageFetchStateImpl(
       isFetching: null == isFetching
           ? _value.isFetching
           : isFetching // ignore: cast_nullable_to_non_nullable
@@ -126,8 +126,8 @@ class __$$_PageFetchStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PageFetchState extends _PageFetchState {
-  _$_PageFetchState(
+class _$PageFetchStateImpl extends _PageFetchState {
+  _$PageFetchStateImpl(
       {this.isFetching = false,
       this.isFetchingMore = false,
       this.hasData = false,
@@ -156,7 +156,7 @@ class _$_PageFetchState extends _PageFetchState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PageFetchState &&
+            other is _$PageFetchStateImpl &&
             (identical(other.isFetching, isFetching) ||
                 other.isFetching == isFetching) &&
             (identical(other.isFetchingMore, isFetchingMore) ||
@@ -173,8 +173,9 @@ class _$_PageFetchState extends _PageFetchState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PageFetchStateCopyWith<_$_PageFetchState> get copyWith =>
-      __$$_PageFetchStateCopyWithImpl<_$_PageFetchState>(this, _$identity);
+  _$$PageFetchStateImplCopyWith<_$PageFetchStateImpl> get copyWith =>
+      __$$PageFetchStateImplCopyWithImpl<_$PageFetchStateImpl>(
+          this, _$identity);
 }
 
 abstract class _PageFetchState extends PageFetchState {
@@ -182,7 +183,7 @@ abstract class _PageFetchState extends PageFetchState {
       {final bool isFetching,
       final bool isFetchingMore,
       final bool hasData,
-      final bool hasError}) = _$_PageFetchState;
+      final bool hasError}) = _$PageFetchStateImpl;
   _PageFetchState._() : super._();
 
   @override
@@ -195,6 +196,6 @@ abstract class _PageFetchState extends PageFetchState {
   bool get hasError;
   @override
   @JsonKey(ignore: true)
-  _$$_PageFetchStateCopyWith<_$_PageFetchState> get copyWith =>
+  _$$PageFetchStateImplCopyWith<_$PageFetchStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

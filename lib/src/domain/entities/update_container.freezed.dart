@@ -64,22 +64,22 @@ class _$UpdateContainerCopyWithImpl<T extends MapConvertMixin, $Res,
 }
 
 /// @nodoc
-abstract class _$$_UpdateContainerCopyWith<T extends MapConvertMixin, $Res>
+abstract class _$$UpdateContainerImplCopyWith<T extends MapConvertMixin, $Res>
     implements $UpdateContainerCopyWith<T, $Res> {
-  factory _$$_UpdateContainerCopyWith(_$_UpdateContainer<T> value,
-          $Res Function(_$_UpdateContainer<T>) then) =
-      __$$_UpdateContainerCopyWithImpl<T, $Res>;
+  factory _$$UpdateContainerImplCopyWith(_$UpdateContainerImpl<T> value,
+          $Res Function(_$UpdateContainerImpl<T>) then) =
+      __$$UpdateContainerImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T entity, List<String> updatedProperties});
 }
 
 /// @nodoc
-class __$$_UpdateContainerCopyWithImpl<T extends MapConvertMixin, $Res>
-    extends _$UpdateContainerCopyWithImpl<T, $Res, _$_UpdateContainer<T>>
-    implements _$$_UpdateContainerCopyWith<T, $Res> {
-  __$$_UpdateContainerCopyWithImpl(
-      _$_UpdateContainer<T> _value, $Res Function(_$_UpdateContainer<T>) _then)
+class __$$UpdateContainerImplCopyWithImpl<T extends MapConvertMixin, $Res>
+    extends _$UpdateContainerCopyWithImpl<T, $Res, _$UpdateContainerImpl<T>>
+    implements _$$UpdateContainerImplCopyWith<T, $Res> {
+  __$$UpdateContainerImplCopyWithImpl(_$UpdateContainerImpl<T> _value,
+      $Res Function(_$UpdateContainerImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -88,7 +88,7 @@ class __$$_UpdateContainerCopyWithImpl<T extends MapConvertMixin, $Res>
     Object? entity = null,
     Object? updatedProperties = null,
   }) {
-    return _then(_$_UpdateContainer<T>(
+    return _then(_$UpdateContainerImpl<T>(
       null == entity
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
@@ -103,9 +103,9 @@ class __$$_UpdateContainerCopyWithImpl<T extends MapConvertMixin, $Res>
 
 /// @nodoc
 
-class _$_UpdateContainer<T extends MapConvertMixin>
+class _$UpdateContainerImpl<T extends MapConvertMixin>
     extends _UpdateContainer<T> {
-  _$_UpdateContainer(this.entity, final List<String> updatedProperties)
+  _$UpdateContainerImpl(this.entity, final List<String> updatedProperties)
       : _updatedProperties = updatedProperties,
         super._();
 
@@ -129,7 +129,7 @@ class _$_UpdateContainer<T extends MapConvertMixin>
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateContainer<T> &&
+            other is _$UpdateContainerImpl<T> &&
             const DeepCollectionEquality().equals(other.entity, entity) &&
             const DeepCollectionEquality()
                 .equals(other._updatedProperties, _updatedProperties));
@@ -144,8 +144,8 @@ class _$_UpdateContainer<T extends MapConvertMixin>
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateContainerCopyWith<T, _$_UpdateContainer<T>> get copyWith =>
-      __$$_UpdateContainerCopyWithImpl<T, _$_UpdateContainer<T>>(
+  _$$UpdateContainerImplCopyWith<T, _$UpdateContainerImpl<T>> get copyWith =>
+      __$$UpdateContainerImplCopyWithImpl<T, _$UpdateContainerImpl<T>>(
           this, _$identity);
 }
 
@@ -153,7 +153,7 @@ abstract class _UpdateContainer<T extends MapConvertMixin>
     extends UpdateContainer<T> {
   factory _UpdateContainer(
           final T entity, final List<String> updatedProperties) =
-      _$_UpdateContainer<T>;
+      _$UpdateContainerImpl<T>;
   _UpdateContainer._() : super._();
 
   @override
@@ -162,6 +162,6 @@ abstract class _UpdateContainer<T extends MapConvertMixin>
   List<String> get updatedProperties;
   @override
   @JsonKey(ignore: true)
-  _$$_UpdateContainerCopyWith<T, _$_UpdateContainer<T>> get copyWith =>
+  _$$UpdateContainerImplCopyWith<T, _$UpdateContainerImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

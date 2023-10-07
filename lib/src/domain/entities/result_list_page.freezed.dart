@@ -89,11 +89,11 @@ class _$ResultListPageCopyWithImpl<T, $Res, $Val extends ResultListPage<T>>
 }
 
 /// @nodoc
-abstract class _$$_ResultListPageCopyWith<T, $Res>
+abstract class _$$ResultListPageImplCopyWith<T, $Res>
     implements $ResultListPageCopyWith<T, $Res> {
-  factory _$$_ResultListPageCopyWith(_$_ResultListPage<T> value,
-          $Res Function(_$_ResultListPage<T>) then) =
-      __$$_ResultListPageCopyWithImpl<T, $Res>;
+  factory _$$ResultListPageImplCopyWith(_$ResultListPageImpl<T> value,
+          $Res Function(_$ResultListPageImpl<T>) then) =
+      __$$ResultListPageImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call(
@@ -106,11 +106,11 @@ abstract class _$$_ResultListPageCopyWith<T, $Res>
 }
 
 /// @nodoc
-class __$$_ResultListPageCopyWithImpl<T, $Res>
-    extends _$ResultListPageCopyWithImpl<T, $Res, _$_ResultListPage<T>>
-    implements _$$_ResultListPageCopyWith<T, $Res> {
-  __$$_ResultListPageCopyWithImpl(
-      _$_ResultListPage<T> _value, $Res Function(_$_ResultListPage<T>) _then)
+class __$$ResultListPageImplCopyWithImpl<T, $Res>
+    extends _$ResultListPageCopyWithImpl<T, $Res, _$ResultListPageImpl<T>>
+    implements _$$ResultListPageImplCopyWith<T, $Res> {
+  __$$ResultListPageImplCopyWithImpl(_$ResultListPageImpl<T> _value,
+      $Res Function(_$ResultListPageImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -120,7 +120,7 @@ class __$$_ResultListPageCopyWithImpl<T, $Res>
     Object? pageInfo = null,
     Object? pageFetchState = null,
   }) {
-    return _then(_$_ResultListPage<T>(
+    return _then(_$ResultListPageImpl<T>(
       null == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
@@ -139,8 +139,8 @@ class __$$_ResultListPageCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_ResultListPage<T> implements _ResultListPage<T> {
-  _$_ResultListPage(this.result, this.pageInfo, this.pageFetchState);
+class _$ResultListPageImpl<T> implements _ResultListPage<T> {
+  _$ResultListPageImpl(this.result, this.pageInfo, this.pageFetchState);
 
   @override
   final Iterable<T> result;
@@ -158,7 +158,7 @@ class _$_ResultListPage<T> implements _ResultListPage<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResultListPage<T> &&
+            other is _$ResultListPageImpl<T> &&
             const DeepCollectionEquality().equals(other.result, result) &&
             (identical(other.pageInfo, pageInfo) ||
                 other.pageInfo == pageInfo) &&
@@ -173,14 +173,14 @@ class _$_ResultListPage<T> implements _ResultListPage<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResultListPageCopyWith<T, _$_ResultListPage<T>> get copyWith =>
-      __$$_ResultListPageCopyWithImpl<T, _$_ResultListPage<T>>(
+  _$$ResultListPageImplCopyWith<T, _$ResultListPageImpl<T>> get copyWith =>
+      __$$ResultListPageImplCopyWithImpl<T, _$ResultListPageImpl<T>>(
           this, _$identity);
 }
 
 abstract class _ResultListPage<T> implements ResultListPage<T> {
   factory _ResultListPage(final Iterable<T> result, final PageInfo pageInfo,
-      final PageFetchState pageFetchState) = _$_ResultListPage<T>;
+      final PageFetchState pageFetchState) = _$ResultListPageImpl<T>;
 
   @override
   Iterable<T> get result;
@@ -190,6 +190,6 @@ abstract class _ResultListPage<T> implements ResultListPage<T> {
   PageFetchState get pageFetchState;
   @override
   @JsonKey(ignore: true)
-  _$$_ResultListPageCopyWith<T, _$_ResultListPage<T>> get copyWith =>
+  _$$ResultListPageImplCopyWith<T, _$ResultListPageImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
