@@ -56,21 +56,22 @@ class _$PageInfoCopyWithImpl<$Res, $Val extends PageInfo>
 }
 
 /// @nodoc
-abstract class _$$_PageInfoCopyWith<$Res> implements $PageInfoCopyWith<$Res> {
-  factory _$$_PageInfoCopyWith(
-          _$_PageInfo value, $Res Function(_$_PageInfo) then) =
-      __$$_PageInfoCopyWithImpl<$Res>;
+abstract class _$$PageInfoImplCopyWith<$Res>
+    implements $PageInfoCopyWith<$Res> {
+  factory _$$PageInfoImplCopyWith(
+          _$PageInfoImpl value, $Res Function(_$PageInfoImpl) then) =
+      __$$PageInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool hasNextPage});
 }
 
 /// @nodoc
-class __$$_PageInfoCopyWithImpl<$Res>
-    extends _$PageInfoCopyWithImpl<$Res, _$_PageInfo>
-    implements _$$_PageInfoCopyWith<$Res> {
-  __$$_PageInfoCopyWithImpl(
-      _$_PageInfo _value, $Res Function(_$_PageInfo) _then)
+class __$$PageInfoImplCopyWithImpl<$Res>
+    extends _$PageInfoCopyWithImpl<$Res, _$PageInfoImpl>
+    implements _$$PageInfoImplCopyWith<$Res> {
+  __$$PageInfoImplCopyWithImpl(
+      _$PageInfoImpl _value, $Res Function(_$PageInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -78,7 +79,7 @@ class __$$_PageInfoCopyWithImpl<$Res>
   $Res call({
     Object? hasNextPage = null,
   }) {
-    return _then(_$_PageInfo(
+    return _then(_$PageInfoImpl(
       null == hasNextPage
           ? _value.hasNextPage
           : hasNextPage // ignore: cast_nullable_to_non_nullable
@@ -89,8 +90,8 @@ class __$$_PageInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PageInfo implements _PageInfo {
-  _$_PageInfo(this.hasNextPage);
+class _$PageInfoImpl implements _PageInfo {
+  _$PageInfoImpl(this.hasNextPage);
 
   @override
   final bool hasNextPage;
@@ -104,7 +105,7 @@ class _$_PageInfo implements _PageInfo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PageInfo &&
+            other is _$PageInfoImpl &&
             (identical(other.hasNextPage, hasNextPage) ||
                 other.hasNextPage == hasNextPage));
   }
@@ -115,17 +116,17 @@ class _$_PageInfo implements _PageInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PageInfoCopyWith<_$_PageInfo> get copyWith =>
-      __$$_PageInfoCopyWithImpl<_$_PageInfo>(this, _$identity);
+  _$$PageInfoImplCopyWith<_$PageInfoImpl> get copyWith =>
+      __$$PageInfoImplCopyWithImpl<_$PageInfoImpl>(this, _$identity);
 }
 
 abstract class _PageInfo implements PageInfo {
-  factory _PageInfo(final bool hasNextPage) = _$_PageInfo;
+  factory _PageInfo(final bool hasNextPage) = _$PageInfoImpl;
 
   @override
   bool get hasNextPage;
   @override
   @JsonKey(ignore: true)
-  _$$_PageInfoCopyWith<_$_PageInfo> get copyWith =>
+  _$$PageInfoImplCopyWith<_$PageInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
