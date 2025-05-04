@@ -5,7 +5,7 @@ import 'page_info.dart';
 part 'result_list_page.freezed.dart';
 
 @freezed
-class ResultListPage<T> with _$ResultListPage<T> {
+sealed class ResultListPage<T> with _$ResultListPage<T> {
   factory ResultListPage(
     Iterable<T> result,
     PageInfo pageInfo,

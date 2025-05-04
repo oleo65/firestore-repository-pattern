@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,90 +10,71 @@ part of 'change_set.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ChangeSet {
-  String get id => throw _privateConstructorUsedError;
-  Map<String, dynamic> get changedFields => throw _privateConstructorUsedError;
+  String get id;
+  Map<String, dynamic> get changedFields;
 
-  @JsonKey(ignore: true)
-  $ChangeSetCopyWith<ChangeSet> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ChangeSetCopyWith<$Res> {
-  factory $ChangeSetCopyWith(ChangeSet value, $Res Function(ChangeSet) then) =
-      _$ChangeSetCopyWithImpl<$Res, ChangeSet>;
-  @useResult
-  $Res call({String id, Map<String, dynamic> changedFields});
-}
-
-/// @nodoc
-class _$ChangeSetCopyWithImpl<$Res, $Val extends ChangeSet>
-    implements $ChangeSetCopyWith<$Res> {
-  _$ChangeSetCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of ChangeSet
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $ChangeSetCopyWith<ChangeSet> get copyWith =>
+      _$ChangeSetCopyWithImpl<ChangeSet>(this as ChangeSet, _$identity);
+
   @override
-  $Res call({
-    Object? id = null,
-    Object? changedFields = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      changedFields: null == changedFields
-          ? _value.changedFields
-          : changedFields // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ChangeSet &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other.changedFields, changedFields));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, id, const DeepCollectionEquality().hash(changedFields));
+
+  @override
+  String toString() {
+    return 'ChangeSet(id: $id, changedFields: $changedFields)';
   }
 }
 
 /// @nodoc
-abstract class _$$ChangeSetImplCopyWith<$Res>
-    implements $ChangeSetCopyWith<$Res> {
-  factory _$$ChangeSetImplCopyWith(
-          _$ChangeSetImpl value, $Res Function(_$ChangeSetImpl) then) =
-      __$$ChangeSetImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $ChangeSetCopyWith<$Res> {
+  factory $ChangeSetCopyWith(ChangeSet value, $Res Function(ChangeSet) _then) =
+      _$ChangeSetCopyWithImpl;
   @useResult
   $Res call({String id, Map<String, dynamic> changedFields});
 }
 
 /// @nodoc
-class __$$ChangeSetImplCopyWithImpl<$Res>
-    extends _$ChangeSetCopyWithImpl<$Res, _$ChangeSetImpl>
-    implements _$$ChangeSetImplCopyWith<$Res> {
-  __$$ChangeSetImplCopyWithImpl(
-      _$ChangeSetImpl _value, $Res Function(_$ChangeSetImpl) _then)
-      : super(_value, _then);
+class _$ChangeSetCopyWithImpl<$Res> implements $ChangeSetCopyWith<$Res> {
+  _$ChangeSetCopyWithImpl(this._self, this._then);
 
+  final ChangeSet _self;
+  final $Res Function(ChangeSet) _then;
+
+  /// Create a copy of ChangeSet
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? changedFields = null,
   }) {
-    return _then(_$ChangeSetImpl(
-      null == id
-          ? _value.id
+    return _then(_self.copyWith(
+      id: null == id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      null == changedFields
-          ? _value._changedFields
+      changedFields: null == changedFields
+          ? _self.changedFields
           : changedFields // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
     ));
@@ -101,8 +83,8 @@ class __$$ChangeSetImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ChangeSetImpl implements _ChangeSet {
-  _$ChangeSetImpl(this.id, final Map<String, dynamic> changedFields)
+class _ChangeSet implements ChangeSet {
+  _ChangeSet(this.id, final Map<String, dynamic> changedFields)
       : _changedFields = changedFields;
 
   @override
@@ -115,16 +97,19 @@ class _$ChangeSetImpl implements _ChangeSet {
     return EqualUnmodifiableMapView(_changedFields);
   }
 
+  /// Create a copy of ChangeSet
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'ChangeSet(id: $id, changedFields: $changedFields)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ChangeSetCopyWith<_ChangeSet> get copyWith =>
+      __$ChangeSetCopyWithImpl<_ChangeSet>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ChangeSetImpl &&
+            other is _ChangeSet &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._changedFields, _changedFields));
@@ -134,24 +119,49 @@ class _$ChangeSetImpl implements _ChangeSet {
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_changedFields));
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'ChangeSet(id: $id, changedFields: $changedFields)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$ChangeSetCopyWith<$Res>
+    implements $ChangeSetCopyWith<$Res> {
+  factory _$ChangeSetCopyWith(
+          _ChangeSet value, $Res Function(_ChangeSet) _then) =
+      __$ChangeSetCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String id, Map<String, dynamic> changedFields});
+}
+
+/// @nodoc
+class __$ChangeSetCopyWithImpl<$Res> implements _$ChangeSetCopyWith<$Res> {
+  __$ChangeSetCopyWithImpl(this._self, this._then);
+
+  final _ChangeSet _self;
+  final $Res Function(_ChangeSet) _then;
+
+  /// Create a copy of ChangeSet
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangeSetImplCopyWith<_$ChangeSetImpl> get copyWith =>
-      __$$ChangeSetImplCopyWithImpl<_$ChangeSetImpl>(this, _$identity);
+  $Res call({
+    Object? id = null,
+    Object? changedFields = null,
+  }) {
+    return _then(_ChangeSet(
+      null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == changedFields
+          ? _self._changedFields
+          : changedFields // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
 }
 
-abstract class _ChangeSet implements ChangeSet {
-  factory _ChangeSet(
-          final String id, final Map<String, dynamic> changedFields) =
-      _$ChangeSetImpl;
-
-  @override
-  String get id;
-  @override
-  Map<String, dynamic> get changedFields;
-  @override
-  @JsonKey(ignore: true)
-  _$$ChangeSetImplCopyWith<_$ChangeSetImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on
