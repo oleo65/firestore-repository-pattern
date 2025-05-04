@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,92 +10,68 @@ part of 'page_fetch_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PageFetchState {
-  bool get isFetching => throw _privateConstructorUsedError;
-  bool get isFetchingMore => throw _privateConstructorUsedError;
-  bool get hasData => throw _privateConstructorUsedError;
-  bool get hasError => throw _privateConstructorUsedError;
+  bool get isFetching;
+  bool get isFetchingMore;
+  bool get hasData;
+  bool get hasError;
 
-  @JsonKey(ignore: true)
-  $PageFetchStateCopyWith<PageFetchState> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PageFetchStateCopyWith<$Res> {
-  factory $PageFetchStateCopyWith(
-          PageFetchState value, $Res Function(PageFetchState) then) =
-      _$PageFetchStateCopyWithImpl<$Res, PageFetchState>;
-  @useResult
-  $Res call(
-      {bool isFetching, bool isFetchingMore, bool hasData, bool hasError});
-}
-
-/// @nodoc
-class _$PageFetchStateCopyWithImpl<$Res, $Val extends PageFetchState>
-    implements $PageFetchStateCopyWith<$Res> {
-  _$PageFetchStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of PageFetchState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $PageFetchStateCopyWith<PageFetchState> get copyWith =>
+      _$PageFetchStateCopyWithImpl<PageFetchState>(
+          this as PageFetchState, _$identity);
+
   @override
-  $Res call({
-    Object? isFetching = null,
-    Object? isFetchingMore = null,
-    Object? hasData = null,
-    Object? hasError = null,
-  }) {
-    return _then(_value.copyWith(
-      isFetching: null == isFetching
-          ? _value.isFetching
-          : isFetching // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isFetchingMore: null == isFetchingMore
-          ? _value.isFetchingMore
-          : isFetchingMore // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasData: null == hasData
-          ? _value.hasData
-          : hasData // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasError: null == hasError
-          ? _value.hasError
-          : hasError // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PageFetchState &&
+            (identical(other.isFetching, isFetching) ||
+                other.isFetching == isFetching) &&
+            (identical(other.isFetchingMore, isFetchingMore) ||
+                other.isFetchingMore == isFetchingMore) &&
+            (identical(other.hasData, hasData) || other.hasData == hasData) &&
+            (identical(other.hasError, hasError) ||
+                other.hasError == hasError));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, isFetching, isFetchingMore, hasData, hasError);
+
+  @override
+  String toString() {
+    return 'PageFetchState(isFetching: $isFetching, isFetchingMore: $isFetchingMore, hasData: $hasData, hasError: $hasError)';
   }
 }
 
 /// @nodoc
-abstract class _$$PageFetchStateImplCopyWith<$Res>
-    implements $PageFetchStateCopyWith<$Res> {
-  factory _$$PageFetchStateImplCopyWith(_$PageFetchStateImpl value,
-          $Res Function(_$PageFetchStateImpl) then) =
-      __$$PageFetchStateImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $PageFetchStateCopyWith<$Res> {
+  factory $PageFetchStateCopyWith(
+          PageFetchState value, $Res Function(PageFetchState) _then) =
+      _$PageFetchStateCopyWithImpl;
   @useResult
   $Res call(
       {bool isFetching, bool isFetchingMore, bool hasData, bool hasError});
 }
 
 /// @nodoc
-class __$$PageFetchStateImplCopyWithImpl<$Res>
-    extends _$PageFetchStateCopyWithImpl<$Res, _$PageFetchStateImpl>
-    implements _$$PageFetchStateImplCopyWith<$Res> {
-  __$$PageFetchStateImplCopyWithImpl(
-      _$PageFetchStateImpl _value, $Res Function(_$PageFetchStateImpl) _then)
-      : super(_value, _then);
+class _$PageFetchStateCopyWithImpl<$Res>
+    implements $PageFetchStateCopyWith<$Res> {
+  _$PageFetchStateCopyWithImpl(this._self, this._then);
 
+  final PageFetchState _self;
+  final $Res Function(PageFetchState) _then;
+
+  /// Create a copy of PageFetchState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,21 +80,21 @@ class __$$PageFetchStateImplCopyWithImpl<$Res>
     Object? hasData = null,
     Object? hasError = null,
   }) {
-    return _then(_$PageFetchStateImpl(
+    return _then(_self.copyWith(
       isFetching: null == isFetching
-          ? _value.isFetching
+          ? _self.isFetching
           : isFetching // ignore: cast_nullable_to_non_nullable
               as bool,
       isFetchingMore: null == isFetchingMore
-          ? _value.isFetchingMore
+          ? _self.isFetchingMore
           : isFetchingMore // ignore: cast_nullable_to_non_nullable
               as bool,
       hasData: null == hasData
-          ? _value.hasData
+          ? _self.hasData
           : hasData // ignore: cast_nullable_to_non_nullable
               as bool,
       hasError: null == hasError
-          ? _value.hasError
+          ? _self.hasError
           : hasError // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
@@ -126,8 +103,8 @@ class __$$PageFetchStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PageFetchStateImpl extends _PageFetchState {
-  _$PageFetchStateImpl(
+class _PageFetchState extends PageFetchState {
+  _PageFetchState(
       {this.isFetching = false,
       this.isFetchingMore = false,
       this.hasData = false,
@@ -147,16 +124,19 @@ class _$PageFetchStateImpl extends _PageFetchState {
   @JsonKey()
   final bool hasError;
 
+  /// Create a copy of PageFetchState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'PageFetchState(isFetching: $isFetching, isFetchingMore: $isFetchingMore, hasData: $hasData, hasError: $hasError)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$PageFetchStateCopyWith<_PageFetchState> get copyWith =>
+      __$PageFetchStateCopyWithImpl<_PageFetchState>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PageFetchStateImpl &&
+            other is _PageFetchState &&
             (identical(other.isFetching, isFetching) ||
                 other.isFetching == isFetching) &&
             (identical(other.isFetchingMore, isFetchingMore) ||
@@ -170,32 +150,61 @@ class _$PageFetchStateImpl extends _PageFetchState {
   int get hashCode =>
       Object.hash(runtimeType, isFetching, isFetchingMore, hasData, hasError);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'PageFetchState(isFetching: $isFetching, isFetchingMore: $isFetchingMore, hasData: $hasData, hasError: $hasError)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$PageFetchStateCopyWith<$Res>
+    implements $PageFetchStateCopyWith<$Res> {
+  factory _$PageFetchStateCopyWith(
+          _PageFetchState value, $Res Function(_PageFetchState) _then) =
+      __$PageFetchStateCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {bool isFetching, bool isFetchingMore, bool hasData, bool hasError});
+}
+
+/// @nodoc
+class __$PageFetchStateCopyWithImpl<$Res>
+    implements _$PageFetchStateCopyWith<$Res> {
+  __$PageFetchStateCopyWithImpl(this._self, this._then);
+
+  final _PageFetchState _self;
+  final $Res Function(_PageFetchState) _then;
+
+  /// Create a copy of PageFetchState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$PageFetchStateImplCopyWith<_$PageFetchStateImpl> get copyWith =>
-      __$$PageFetchStateImplCopyWithImpl<_$PageFetchStateImpl>(
-          this, _$identity);
+  $Res call({
+    Object? isFetching = null,
+    Object? isFetchingMore = null,
+    Object? hasData = null,
+    Object? hasError = null,
+  }) {
+    return _then(_PageFetchState(
+      isFetching: null == isFetching
+          ? _self.isFetching
+          : isFetching // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFetchingMore: null == isFetchingMore
+          ? _self.isFetchingMore
+          : isFetchingMore // ignore: cast_nullable_to_non_nullable
+              as bool,
+      hasData: null == hasData
+          ? _self.hasData
+          : hasData // ignore: cast_nullable_to_non_nullable
+              as bool,
+      hasError: null == hasError
+          ? _self.hasError
+          : hasError // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
-abstract class _PageFetchState extends PageFetchState {
-  factory _PageFetchState(
-      {final bool isFetching,
-      final bool isFetchingMore,
-      final bool hasData,
-      final bool hasError}) = _$PageFetchStateImpl;
-  _PageFetchState._() : super._();
-
-  @override
-  bool get isFetching;
-  @override
-  bool get isFetchingMore;
-  @override
-  bool get hasData;
-  @override
-  bool get hasError;
-  @override
-  @JsonKey(ignore: true)
-  _$$PageFetchStateImplCopyWith<_$PageFetchStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

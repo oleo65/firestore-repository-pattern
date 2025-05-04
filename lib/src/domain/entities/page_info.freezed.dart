@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,79 +10,63 @@ part of 'page_info.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PageInfo {
-  bool get hasNextPage => throw _privateConstructorUsedError;
+  bool get hasNextPage;
 
-  @JsonKey(ignore: true)
-  $PageInfoCopyWith<PageInfo> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PageInfoCopyWith<$Res> {
-  factory $PageInfoCopyWith(PageInfo value, $Res Function(PageInfo) then) =
-      _$PageInfoCopyWithImpl<$Res, PageInfo>;
-  @useResult
-  $Res call({bool hasNextPage});
-}
-
-/// @nodoc
-class _$PageInfoCopyWithImpl<$Res, $Val extends PageInfo>
-    implements $PageInfoCopyWith<$Res> {
-  _$PageInfoCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $PageInfoCopyWith<PageInfo> get copyWith =>
+      _$PageInfoCopyWithImpl<PageInfo>(this as PageInfo, _$identity);
+
   @override
-  $Res call({
-    Object? hasNextPage = null,
-  }) {
-    return _then(_value.copyWith(
-      hasNextPage: null == hasNextPage
-          ? _value.hasNextPage
-          : hasNextPage // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PageInfo &&
+            (identical(other.hasNextPage, hasNextPage) ||
+                other.hasNextPage == hasNextPage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, hasNextPage);
+
+  @override
+  String toString() {
+    return 'PageInfo(hasNextPage: $hasNextPage)';
   }
 }
 
 /// @nodoc
-abstract class _$$PageInfoImplCopyWith<$Res>
-    implements $PageInfoCopyWith<$Res> {
-  factory _$$PageInfoImplCopyWith(
-          _$PageInfoImpl value, $Res Function(_$PageInfoImpl) then) =
-      __$$PageInfoImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $PageInfoCopyWith<$Res> {
+  factory $PageInfoCopyWith(PageInfo value, $Res Function(PageInfo) _then) =
+      _$PageInfoCopyWithImpl;
   @useResult
   $Res call({bool hasNextPage});
 }
 
 /// @nodoc
-class __$$PageInfoImplCopyWithImpl<$Res>
-    extends _$PageInfoCopyWithImpl<$Res, _$PageInfoImpl>
-    implements _$$PageInfoImplCopyWith<$Res> {
-  __$$PageInfoImplCopyWithImpl(
-      _$PageInfoImpl _value, $Res Function(_$PageInfoImpl) _then)
-      : super(_value, _then);
+class _$PageInfoCopyWithImpl<$Res> implements $PageInfoCopyWith<$Res> {
+  _$PageInfoCopyWithImpl(this._self, this._then);
 
+  final PageInfo _self;
+  final $Res Function(PageInfo) _then;
+
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? hasNextPage = null,
   }) {
-    return _then(_$PageInfoImpl(
-      null == hasNextPage
-          ? _value.hasNextPage
+    return _then(_self.copyWith(
+      hasNextPage: null == hasNextPage
+          ? _self.hasNextPage
           : hasNextPage // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
@@ -90,22 +75,25 @@ class __$$PageInfoImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PageInfoImpl implements _PageInfo {
-  _$PageInfoImpl(this.hasNextPage);
+class _PageInfo implements PageInfo {
+  _PageInfo(this.hasNextPage);
 
   @override
   final bool hasNextPage;
 
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'PageInfo(hasNextPage: $hasNextPage)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$PageInfoCopyWith<_PageInfo> get copyWith =>
+      __$PageInfoCopyWithImpl<_PageInfo>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PageInfoImpl &&
+            other is _PageInfo &&
             (identical(other.hasNextPage, hasNextPage) ||
                 other.hasNextPage == hasNextPage));
   }
@@ -113,20 +101,43 @@ class _$PageInfoImpl implements _PageInfo {
   @override
   int get hashCode => Object.hash(runtimeType, hasNextPage);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'PageInfo(hasNextPage: $hasNextPage)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$PageInfoCopyWith<$Res>
+    implements $PageInfoCopyWith<$Res> {
+  factory _$PageInfoCopyWith(_PageInfo value, $Res Function(_PageInfo) _then) =
+      __$PageInfoCopyWithImpl;
+  @override
+  @useResult
+  $Res call({bool hasNextPage});
+}
+
+/// @nodoc
+class __$PageInfoCopyWithImpl<$Res> implements _$PageInfoCopyWith<$Res> {
+  __$PageInfoCopyWithImpl(this._self, this._then);
+
+  final _PageInfo _self;
+  final $Res Function(_PageInfo) _then;
+
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$PageInfoImplCopyWith<_$PageInfoImpl> get copyWith =>
-      __$$PageInfoImplCopyWithImpl<_$PageInfoImpl>(this, _$identity);
+  $Res call({
+    Object? hasNextPage = null,
+  }) {
+    return _then(_PageInfo(
+      null == hasNextPage
+          ? _self.hasNextPage
+          : hasNextPage // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
-abstract class _PageInfo implements PageInfo {
-  factory _PageInfo(final bool hasNextPage) = _$PageInfoImpl;
-
-  @override
-  bool get hasNextPage;
-  @override
-  @JsonKey(ignore: true)
-  _$$PageInfoImplCopyWith<_$PageInfoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

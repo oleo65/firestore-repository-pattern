@@ -4,7 +4,8 @@ import 'map_convert_mixin.dart';
 part 'update_container.freezed.dart';
 
 @freezed
-class UpdateContainer<T extends MapConvertMixin> with _$UpdateContainer<T> {
+sealed class UpdateContainer<T extends MapConvertMixin>
+    with _$UpdateContainer<T> {
   UpdateContainer._();
 
   factory UpdateContainer(
