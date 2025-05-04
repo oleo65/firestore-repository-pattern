@@ -1,4 +1,4 @@
-library firestore_repository_pattern;
+library;
 
 export 'src/data/models/change_set.dart' show ChangeSet;
 export 'src/data/sources/exceptions.dart' show ElementNotFoundException;
