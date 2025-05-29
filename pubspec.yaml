@@ -1,6 +1,6 @@
 name: firestore_repository_pattern
 description: Application scaffold for efficient firestore usage including pagination.
-version: 0.7.0
+version: 0.8.0
 homepage: https://github.com/oleo65/firestore-repository-pattern
 
 environment:
@@ -24,7 +24,7 @@ dev_dependencies:
 
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 # The following section is specific to Flutter packages.
 flutter:
