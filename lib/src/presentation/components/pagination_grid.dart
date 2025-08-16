@@ -48,7 +48,7 @@ class PaginationGrid<
     void fetchMore() {
       if (isBottom()) {
         debugPrint("Fetch more bottom reached");
-        final currentData = ref.read(paginationProvider).valueOrNull;
+        final currentData = ref.read(paginationProvider).value;
 
         if (currentData != null &&
             !currentData.pageFetchState.isProcessing &&
