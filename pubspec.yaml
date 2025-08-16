@@ -1,6 +1,6 @@
 name: firestore_repository_pattern
 description: Application scaffold for efficient firestore usage including pagination.
-version: 0.8.0
+version: 0.9.0
 homepage: https://github.com/oleo65/firestore-repository-pattern
 
 environment:
@@ -8,11 +8,11 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  cloud_firestore: ^5.0.0
+  cloud_firestore: ^6.0.0
   flutter_hooks: ^0.21.0
   freezed_annotation: ^3.0.0
-  riverpod_annotation: ^2.1.0
-  hooks_riverpod: ^2.3.0
+  riverpod_annotation: ^3.0.0-dev.17
+  hooks_riverpod: ^3.0.0-dev.17
 
   flutter:
     sdk: flutter
@@ -20,7 +20,7 @@ dependencies:
 dev_dependencies:
   freezed: ^3.0.0
   build_runner: ^2.0.6
-  riverpod_generator: ^2.2.0
+  riverpod_generator: ^3.0.0-dev.17
 
   flutter_test:
     sdk: flutter
